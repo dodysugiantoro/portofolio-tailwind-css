@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Dody Sugiantoro</title>
-    <link rel="stylesheet" href="dist/output.css">
+    <title>Dody Sugiantoro Portfolio</title>
+    <link rel="stylesheet" href="dist/css/final.css">
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
 <body>
 <!-- Header Start -->
@@ -22,25 +29,37 @@
                         <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
                     </button>
 
-                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a href="#home" class="font-base text-dark py-2 mx-8 flex group-hover:text-primary">Beranda</a>
+                                <a href="#home" class="font-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Beranda</a>
                             </li>
                             <li class="group">
-                                <a href="#about" class="font-base text-dark py-2 mx-8 flex group-hover:text-primary">Tentang Saya</a>
+                                <a href="#about" class="font-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Tentang Saya</a>
                             </li>
                             <li class="group">
-                                <a href="#portofolio" class="font-base text-dark py-2 mx-8 flex group-hover:text-primary">Portofolio</a>
+                                <a href="#portfolio" class="font-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portfolio</a>
                             </li>
                             <li class="group">
-                                <a href="#skill" class="font-base text-dark py-2 mx-8 flex group-hover:text-primary">Skills</a>
+                                <a href="#skill" class="font-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Skills</a>
                             </li>
                             <li class="group">
-                                <a href="#hobby" class="font-base text-dark py-2 mx-8 flex group-hover:text-primary">Hobby</a>
+                                <a href="#hobby" class="font-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Hobby</a>
                             </li>
                             <li class="group">
-                                <a href="#contact" class="font-base text-dark py-2 mx-8 flex group-hover:text-primary">Contact</a>
+                                <a href="#contact" class="font-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Contact</a>
+                            </li>
+                            <li class="mt-3 lg:mt-0 flex items-center pl-8">
+                                <div class="flex">
+                                    <span class="mr-2 text-sm text-slate-500">light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle">
+                                    <label for="dark-toggle">
+                                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                                        </div>                        
+                                    </label>
+                                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                                </div>
                             </li>
                         </ul>
                     </nav>
@@ -51,12 +70,12 @@
 <!-- Header End -->
     
 <!-- Hero Section Start -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="sm:w-full self-center px-4 lg:w-1/2">
                     <h1 class="text-base font-semibold text-primary md:text-xl lg:text-2xl">Halo Semua 🤞, 
-                        Saya <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl">Dody Sugiantoro</span> </h1>
+                        Saya <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white">Dody Sugiantoro</span> </h1>
                     <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Web Developer <span class="text-dark">| IT Departement </span></h2>
                     <p class="font-medium text-secondary mb-10 leading-relaxed">Seorang yang penuh dengan rasa ingin tahu tentang teknologi.</p>
 
@@ -73,36 +92,36 @@
 <!-- Hero Section End -->
 
 <!-- About Section Start -->
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pt-36 pb-32 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-10 lg:w-1/2">
                     <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-lg">Jangan Lupa Bahagia..</h2>
-                    <p class="font-mendium text-base text-secondary max-w-xl">Tak kenal maka tak sayang, ada uang abang disayang gak ada uang abang ditendang!</p>
+                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-lg dark:text-white">Jangan Lupa Bahagia..</h2>
+                    <p class="font-mendium text-base text-secondary max-w-xl dark:text-white">Tak kenal maka tak sayang, ada uang abang disayang gak ada uang abang ditendang!</p>
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
-                    <h3 class="font-semibold text-dark tex-2xl mb-4 lg:text-3xl lg:pt-10">Mari Berteman</h3>
-                    <p class="font-mendium text-base text-secondary mb-6">Men Sana In Corpore Sano yang artinya dibalik tubuh yang sehat terdapat jiwa yang kuat.</p>
+                    <h3 class="font-semibold text-dark tex-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Mari Berteman</h3>
+                    <p class="font-mendium text-base text-secondary mb-6 dark:text-white">Men Sana In Corpore Sano yang artinya dibalik tubuh yang sehat terdapat jiwa yang kuat.</p>
                     <div class="flex item-center">
                         <!-- Youtube -->
-                        <a href="https://www.youtube.com/channel/UCU_6R6g67yslJZOkxQpXYpg" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <a href="https://www.youtube.com/channel/UCU_6R6g67yslJZOkxQpXYpg" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
                             <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                         </a>
                         <!-- Instagram -->
-                        <a href="https://www.instagram.com/dodysugiantoro/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <a href="https://www.instagram.com/dodysugiantoro/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
                             <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
                         </a>
                         <!-- Facebook -->
-                        <a href="https://www.facebook.com/doddy.sugiantoro/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <a href="https://www.facebook.com/doddy.sugiantoro/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
                             <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         </a>
                         <!-- Twitter -->
-                        <a href="https://twitter.com/sugiantoro12" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <a href="https://twitter.com/sugiantoro12" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
                             <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
                         </a>
                         <!-- Github -->
-                        <a href="https://github.com/dodysugiantoro" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <a href="https://github.com/dodysugiantoro" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
                             <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                         </a>
                     </div>
@@ -113,13 +132,13 @@
     </section>
 <!-- About Section End -->
 
-<!-- Portofolio Section Start -->
-    <section id="portofolio" class="pt-36 pb-16 bg-slate-100">
+<!-- Portfolio Section Start -->
+    <section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Pengalaman Kerja</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Bekerja lebih dari 10 tahun</h2>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Bekerja lebih dari 10 tahun</h2>
                     <p class="font-medium text-md text-secondary md:text-lg">Seorang pengalaman yang sudah bekerja cukup lama di bidang IT, baik di bidang perangkat keras (Hardware) ataupun lunak (Software). Kemudian fokus ke dalam bidang software terutama di Web Based.</p>
                 </div>
             </div>
@@ -128,7 +147,7 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="https://source.unsplash.com/800x500?hotel" alt="PT Loka Wisata Asri" width="w-full">
                     </div>    
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">PT. Loka Wisata Asri |<span class="font-semibold text-lg text-primary mb-2"> Web Developer</span></h3>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">PT. Loka Wisata Asri |<span class="font-semibold text-lg text-primary mb-2"> Web Developer</span></h3>
                     <p class="font-medium text-base text-secondary">
                         <span class="font-semibold">1 September 2018 - Present <br></span>
                         Maintenance aplikasi perhotelan yang sudah berjalan dengan bahasa program ASP dan ASP.Net dengan menggunakan database Microsoft Foxpro dan SQL Server. Membuat modul tambahan sesuai dengan permintaan user.
@@ -138,7 +157,7 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="https://source.unsplash.com/800x500?computer" alt="PT Fujitech Digital Technology" width="w-full items-center">
                     </div>    
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">PT. Fujitech Digital Technology |<span class="font-semibold text-lg text-primary mb-2"> Staff IT</span></h3>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">PT. Fujitech Digital Technology |<span class="font-semibold text-lg text-primary mb-2"> Staff IT</span></h3>
                     <p class="font-medium text-base text-secondary">
                         <span class="font-semibold">1 Agustus 2014 - 1 Juli 2018 <br></span>
                         Maintenance website dan update promo. Instalasi Software dan Instalasi Jaringan.
@@ -148,7 +167,7 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="https://source.unsplash.com/800x500?orbit" alt="PT Tri Daya Megatama" width="w-full">
                     </div>    
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">PT. Tri Daya Megatama |<span class="font-semibold text-lg text-primary mb-2"> Teknisi VSAT IP</span></h3>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">PT. Tri Daya Megatama |<span class="font-semibold text-lg text-primary mb-2"> Teknisi VSAT IP</span></h3>
                     <p class="font-medium text-base text-secondary">
                         <span class="font-semibold">1 Januari 2011 - 1 Agustus 2014 <br></span>
                         Instalasi VSAT IP dengan Pointing SQF>85 dan Crosspole dengan pihak Provider Internet (Telkom).
@@ -158,7 +177,7 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="https://source.unsplash.com/800x500?manufacture" alt="PT Nany Wahyuni Industries" width="w-full">
                     </div>    
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">PT. Nany Wahyuni Industries |<span class="font-semibold text-lg text-primary mb-2"> Supervisor IT</span></h3>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">PT. Nany Wahyuni Industries |<span class="font-semibold text-lg text-primary mb-2"> Supervisor IT</span></h3>
                     <p class="font-medium text-base text-secondary">
                         <span class="font-semibold">1 Oktober 2010 - 1 Januari 2011 <br></span>
                         Memastikan pekerjaan Staff IT sesuai dengan SOP yang ada. Baik di Kantor Pusat maupun Kantor Cabang harus berjalan dengan benar.
@@ -168,7 +187,7 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="https://source.unsplash.com/800x500?study" alt="PT Cakra Latih Tangguh" width="w-full">
                     </div>    
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">PT. Cakra Latih Tangguh |<span class="font-semibold text-lg text-primary mb-2"> IT Administator</span></h3>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">PT. Cakra Latih Tangguh |<span class="font-semibold text-lg text-primary mb-2"> IT Administator</span></h3>
                     <p class="font-medium text-base text-secondary">
                         <span class="font-semibold">1 September 2009 - 1 Oktober 2010 <br></span>
                         Memastikan PC dan Laptop bisa digunakan dengan baik. Jaringan kantor dan wifi. Edit video dokumentasi kelas.
@@ -177,15 +196,15 @@
             </div> 
         </div>        
     </section>
-<!-- Portofolio Section End -->
+<!-- Portfolio Section End -->
 
 <!-- Skill Section Start  -->
-    <section id="skill" class="pt-36 pb-32 bg-slate-700">
+    <section id="skill" class="pt-36 pb-32 bg-slate-700 dark:bg-slate-300">
         <div class="container">
             <div class="w-full px-4">
                 <div class="mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Skills</h4>
-                    <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">Skill yang dimiliki</h2>
+                    <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-dark">Skill yang dimiliki</h2>
                     <p class="font-medium text-md text-secondary md:text-lg">Berikut ini beberapa pengetahuan yang berkaitan dengan website</p>
                 </div>
             </div>
@@ -224,41 +243,41 @@
 <!-- Skill Section End -->
 
 <!-- Blog Section Start -->
-    <section id="hobby" class="pt-36 pb-32 bg-slate-100">
+    <section id="hobby" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Hobby</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Kegemaran dan Kesukaan</h2>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Kegemaran dan Kesukaan</h2>
                     <p class="font-medium text-md text-secondary md:text-lg">Orang yang suka dengan tantangan dan pengalaman baru.</p>
                 </div>
             </div>
             <div class="flex flex-wrap">
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overvlow-hidden mb-10">
+                    <div class="bg-white rounded-xl shadow-lg overvlow-hidden mb-10 dark:bg-slate-800">
                         <img src="https://source.unsplash.com/360x200?programming" alt="programming" class="w-full">
                         <div class="py-8 px-6">
-                            <h3><a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Programming</a></h3>
+                            <h3><a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Programming</a></h3>
                             <p class="font-medium text-base text-secondary mb-6">Mencoba beberapa bahasa program untuk membandingkan minat atau passion kita berada dimana?</p>
                             <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overvlow-hidden mb-10">
+                    <div class="bg-white rounded-xl shadow-lg overvlow-hidden mb-10 dark:bg-slate-800">
                         <img src="https://source.unsplash.com/360x200?mountain" alt="mountain" class="w-full">
                         <div class="py-8 px-6">
-                            <h3><a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Traveling</a></h3>
+                            <h3><a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Traveling</a></h3>
                             <p class="font-medium text-base text-secondary mb-6">Mengexplore luasnya negeri ini dengan berkendara ataupun naik angkutan umum, menjadi suatu keseruan tersendiri yang hanya bisa di nikmati dengan cara Traveling. Dengan bonus mencoba kenikmatan wisata kuliner khas lokal.</p>
                             <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overvlow-hidden mb-10">
+                    <div class="bg-white rounded-xl shadow-lg overvlow-hidden mb-10 dark:bg-slate-800">
                         <img src="https://source.unsplash.com/360x200?sport" alt="sport" class="w-full">
                         <div class="py-8 px-6">
-                            <h3><a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Olahraga</a></h3>
+                            <h3><a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Olahraga</a></h3>
                             <p class="font-medium text-base text-secondary mb-6">Menjaga kesehatan agar kita bisa bekerja dengan baik dan juga memiliki stamina yang baik pula kita harus menyempatkan diri untuk olahraga biarpun hanya di rumah.</p>
                             <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
                         </div>
@@ -270,12 +289,12 @@
 <!-- BLog Section End -->
 
 <!-- Contact Section Start -->
-    <section id="contact" class="pt-36 pb-32">
+    <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Hubungi Kami</h2>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Hubungi Kami</h2>
                     <p class="font-medium text-md text-secondary md:text-lg">Tinggalkan pesan</p>
                 </div>
             </div>
@@ -339,7 +358,7 @@
                             <a href="#about" class="inline-block text-base text-white mb-3">Tentang Saya</a>
                         </li>
                         <li>
-                            <a href="#portofolio" class="inline-block text-base text-white mb-3">Portofolio</a>
+                            <a href="#portfolio" class="inline-block text-base text-white mb-3">Portfolio</a>
                         </li>
                         <li>
                             <a href="#skill" class="inline-block text-base text-white mb-3">Skills</a>
@@ -382,6 +401,11 @@
     </footer>
 <!-- Footer End -->
 
+<!-- Back to top Start -->
+    <a href="#home" id="to-top" class="hidden fixed bottom-4 right-4 z-[9999] justify-center items-center h-14 w-14 rounded-full bg-primary p-4 hover:animate-pulse">
+        <span class="block h-5 w-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
+    </a>
+<!-- Back to top End -->
 <script src="dist/js/script.js"></script>
 </body>
 </html>
